@@ -30,6 +30,7 @@ class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         columns = defaultdict(set)
         rows = defaultdict(set)
+        # key = (r//3, c//3)
         squares = defaultdict(set)
 
         for r in range(9):
@@ -45,7 +46,7 @@ class Solution:
                 squares[(r//3, c//3)].add(board[r][c])
         return True
 
-        
+
 if __name__ == "__main__":
     board = [
         ["1","2",".",".","3",".",".",".","."],
