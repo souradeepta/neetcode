@@ -27,7 +27,7 @@ class Solution:
 
     def groupAnagrams2(self, strs: List[str]) -> List[List[str]]:
         """
-        T: o(mn) where m = number of strings and n = average length of each str
+        T: o(m*n) where m = number of strings and n = average length of each str
         - complexity of converting a list to tuple is n
         """
         result = defaultdict(list)
