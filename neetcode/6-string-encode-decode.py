@@ -8,7 +8,7 @@ class Solution:
         for s in strs:
             length = len(s)
             # encoded = str(length)+s
-            encoded = encoded + ''.join(str(length)+s)
+            encoded = encoded + "".join(str(length) + s)
         print(f"{encoded=}")
         return encoded
 
@@ -25,8 +25,8 @@ class Solution:
                 step: int = int(s[left])
                 print(f"current pointer increment {step=}")
                 print(f"slice from {left+1}:{step+1}")
-                end = left+step+1
-                temp = s[left+1: end]
+                end = left + step + 1
+                temp = s[left + 1 : end]
                 print(f"{temp=}")
             left += step + 1
             print(f"updated pointer {left=}")
@@ -52,7 +52,7 @@ class Solution:
 
         while left < len(s):
             step = left
-            while s[step] != '#':
+            while s[step] != "#":
                 step += 1
             length = int(s[left:step])
             left = step + 1
@@ -65,8 +65,8 @@ class Solution:
 
 
 if __name__ == "__main__":
-    input = ["neet","code","love","you"]
-    input2 = ["we","say",":","yes"]
-    input3 = ["we","say",":","yes","!@#$%^&*()"]
+    input = ["neet", "code", "love", "you"]
+    input2 = ["we", "say", ":", "yes"]
+    input3 = ["we", "say", ":", "yes", "!@#$%^&*()"]
     output = Solution().encode2(input3)
     assert Solution().decode2(output) == input3

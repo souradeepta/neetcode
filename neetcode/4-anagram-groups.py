@@ -33,9 +33,9 @@ class Solution:
         result = defaultdict(list)
         for s in strs:
             # since only small chars
-            count = [0]*26
+            count = [0] * 26
             for c in s:
-                count[ord(c) - ord('a')] += 1
+                count[ord(c) - ord("a")] += 1
 
             result[tuple(count)].append(s)
         print(result.values())
@@ -43,7 +43,10 @@ class Solution:
 
 
 if __name__ == "__main__":
-    assert Solution().groupAnagrams(["act","pots","tops","cat","stop","hat"]) == \
-        [["hat"],["act", "cat"],["pots","stop", "tops"]]
+    assert Solution().groupAnagrams(["act", "pots", "tops", "cat", "stop", "hat"]) == [
+        ["hat"],
+        ["act", "cat"],
+        ["pots", "stop", "tops"],
+    ]
     assert Solution().groupAnagrams(["x"]) == [["x"]]
     assert Solution().groupAnagrams([""]) == [[""]]

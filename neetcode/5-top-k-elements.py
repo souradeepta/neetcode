@@ -33,7 +33,7 @@ class Solution:
         - Took 85ms on LCs
         """
         count = {}
-        frequency_bucket = [[] for i in range(len(nums)+1)]
+        frequency_bucket = [[] for i in range(len(nums) + 1)]
 
         # generate count of items first
         for n in nums:
@@ -56,5 +56,5 @@ class Solution:
 
 
 if __name__ == "__main__":
-    assert Solution().topKFrequent2([1,2,2,3,3,3], 2) == [2,3]
-    assert Solution().topKFrequent2([7,7], 1) == [7]
+    assert Solution().topKFrequent2([1, 2, 2, 3, 3, 3], 2) == [2, 3]
+    assert Solution().topKFrequent2([7, 7], 1) == [7]

@@ -15,18 +15,18 @@ class Solution:
         decoded = []
         word = ""
         for char in s:
-            if char != '#':
-                word = word+char
+            if char != "#":
+                word = word + char
             else:
                 decoded.append(word)
-                word =""
+                word = ""
                 print(f"{word=}, {decoded=}")
         return decoded
 
 
 if __name__ == "__main__":
-    input1 = ["neet","code","love","you"]
-    input2 = ["we","say",":","yes"]
-    input3 = ["we","say",":","yes","!@#$%^&*()"]
+    input1 = ["neet", "code", "love", "you"]
+    input2 = ["we", "say", ":", "yes"]
+    input3 = ["we", "say", ":", "yes", "!@#$%^&*()"]
     output = Solution().encode(input2)
     assert Solution().decode(output) == input2

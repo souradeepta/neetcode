@@ -16,5 +16,5 @@ class Solution:
 
 
 if __name__ == "__main__":
-    assert Solution().twoSum([3,4,5,6], 7) == [0,1]
-    assert Solution().twoSum([4,5,6], 10) == [0,2]
+    assert Solution().twoSum([3, 4, 5, 6], 7) == [0, 1]
+    assert Solution().twoSum([4, 5, 6], 10) == [0, 2]

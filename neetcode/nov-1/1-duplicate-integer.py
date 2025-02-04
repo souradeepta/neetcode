@@ -9,6 +9,6 @@ class Solution:
         return True if length > non_dup_len else False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().hasDuplicate([1, 2, 3, 1]) is True
     assert Solution().hasDuplicate([1, 2, 3, 4]) is False

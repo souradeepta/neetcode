@@ -2,7 +2,7 @@
 # System Design chess.com
 
 ## features required
-1. personal ranking
+1. personal ranking of a player
 
 2. 5 above and below
 
@@ -14,7 +14,7 @@
     - ranking table not required. can be calculated from the scores itself.
     - current scehma only has player and their scores.
 
-4. friends also 3 above and below.
+4. friends also 5 above and below.
 
 
 ## how if 100,000 updates happen because of simultaneous scores

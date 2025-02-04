@@ -1,6 +1,7 @@
 from typing import List
 import copy
 
+
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         """
@@ -12,7 +13,7 @@ class Solution:
         print(f"{product=}")
         for idx, num in enumerate(nums):
             if num != 0:
-                nums[idx] = product//num
+                nums[idx] = product // num
                 print(f"{nums=}")
         return nums
 
@@ -38,11 +39,13 @@ class Solution:
             prefix *= nums[i]
 
         postfix = 1
-        for i in range(len(nums)-1, -1, -1):
+        for i in range(len(nums) - 1, -1, -1):
             result[i] *= postfix
             postfix *= nums[i]
 
         return result
+
+
 if __name__ == "__main__":
-    assert Solution().productExceptSelf2([1,2,4,6]) == [48,24,12,8]
-    assert Solution().productExceptSelf2([-1,0,1,2,3]) == [0,-6,0,0,0]
+    assert Solution().productExceptSelf2([1, 2, 4, 6]) == [48, 24, 12, 8]
+    assert Solution().productExceptSelf2([-1, 0, 1, 2, 3]) == [0, -6, 0, 0, 0]
