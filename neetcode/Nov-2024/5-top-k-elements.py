@@ -14,5 +14,5 @@ class Solution:
 
 
 if __name__ == "__main__":
-    assert Solution().topKFrequent([1,2,2,3,3,3], 2) == [2,3]
-    assert Solution().topKFrequent([7,7], 1) == [7]
+    assert Solution().topKFrequent([1, 2, 2, 3, 3, 3], 2) == [2, 3]
+    assert Solution().topKFrequent([7, 7], 1) == [7]

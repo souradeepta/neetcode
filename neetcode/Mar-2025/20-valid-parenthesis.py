@@ -8,11 +8,7 @@ class Solution:
         T: o(n), S: o(n)
         """
         stack = []
-        mapping = {
-            ')': '(',
-            '}': '{',
-            ']': '['
-        }
+        mapping = {")": "(", "}": "{", "]": "["}
         for char in s:
             if char in mapping:
                 if stack and mapping.get(char) == stack[-1]:
@@ -26,7 +22,7 @@ class Solution:
 
 
 if __name__ == "__main__":
-    assert Solution().isValid('()') is True
+    assert Solution().isValid("()") is True
     assert Solution().isValid("()[]{}") is True
     assert Solution().isValid("(]") is False
     assert Solution().isValid("([])") is True

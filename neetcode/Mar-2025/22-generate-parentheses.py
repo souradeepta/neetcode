@@ -4,6 +4,7 @@ class Solution:
     T: O(4^n/Root(n))
     S: O(n)
     """
+
     def generateParenthesis(self, n: int) -> list[str]:
         """
         1. only add open paranthesis if open < n
@@ -38,5 +39,11 @@ class Solution:
 
 
 if __name__ == "__main__":
-    assert Solution().generateParenthesis(3) == ["((()))","(()())","(())()","()(())","()()()"]
+    assert Solution().generateParenthesis(3) == [
+        "((()))",
+        "(()())",
+        "(())()",
+        "()(())",
+        "()()()",
+    ]
     assert Solution().generateParenthesis(1) == ["()"]

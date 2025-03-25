@@ -4,9 +4,10 @@ class Solution:
     - forgot base case of match
     - forgot to cast the strs to ints
     """
+
     def evalRPN(self, tokens: list[str]) -> int:
         stack = []
-        operands = ('+', '-', '*', '/')
+        operands = ("+", "-", "*", "/")
 
         for token in tokens:
             if token not in operands:
@@ -21,21 +22,21 @@ class Solution:
 
     def calculate(self, first, second, operand):
         match operand:
-            case '+':
+            case "+":
                 result = first + second
-            case '-':
+            case "-":
                 result = first - second
-            case '/':
+            case "/":
                 # result = first // second
                 result = int(float(first / second))
-            case '*':
+            case "*":
                 result = first * second
             case _:
-                raise ValueError('Invalid Operator')
+                raise ValueError("Invalid Operator")
 
         return result
 
 
 if __name__ == "__main__":
-    assert Solution().evalRPN(["2","1","+","3","*"]) == 9
-    assert Solution().evalRPN(["4","13","5","/","+"]) == 6
+    assert Solution().evalRPN(["2", "1", "+", "3", "*"]) == 9
+    assert Solution().evalRPN(["4", "13", "5", "/", "+"]) == 6

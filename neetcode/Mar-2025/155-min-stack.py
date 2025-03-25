@@ -57,7 +57,6 @@ def main():
     # print(obj.top())
     # print(obj.getMin())
 
-
     obj = MinStack()
     obj.push(0)
     print(obj.getMin())
